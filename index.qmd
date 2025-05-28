@@ -8,7 +8,7 @@ about:
   image-width: 17em
   links:
     - text: LinkedIn
-      href: https://www.linkedin.com/in/max-tu-833983239
+      href: "https://www.linkedin.com/in/max-tu-833983239"
     - text: Github
       href: https://github.com/Henji15
     - text: Email
