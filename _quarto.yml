@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Henji15.github.io"
+  title: "Max Tu"
   navbar:
     left:
       - href: index.qmd
