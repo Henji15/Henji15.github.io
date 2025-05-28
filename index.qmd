@@ -8,11 +8,11 @@ about:
   image-width: 17em
   links:
     - text: LinkedIn
-      href: "https://www.linkedin.com/in/max-tu-833983239"
+      href: "https://www.linkedin.com/in/max-tu-833983239/"
     - text: Github
       href: https://github.com/Henji15
     - text: Email
       href: mailto:mtu893@ucsb.edu
 ---
 
-Hi, nice to meet y'all! My name is Max Tu (pronounced two). I'm a third year environmental studies and economics student at UC Santa Barbara. I'm passionate about creating sustainable solutions that can both benefit the environment and the market. I'm also interested about climate mitigation and urban planning. I hope to continue in a career in the environmental industry. Feel free to explore the page!
+Hi, nice to meet y'all! My name is Max Tu (pronounced two). I'm a third year environmental studies (B.S) and economics (B.A) student at UC Santa Barbara. I'm passionate about creating sustainable solutions that can both benefit the environment and the market. I'm also interested about climate mitigation and urban planning. I hope to continue in a career in the environmental industry. Feel free to explore the page!
