@@ -7,15 +7,11 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: "Home"
       - href: AboutMe.qmd
-        text: "About Me"
       - href: project.qmd
-        text: "Project"
       - href: freeforall.qmd
-        text: "Free for All"
       - href: resume.qmd
-        text: "Resume"
+        
 
 format:
   html:
