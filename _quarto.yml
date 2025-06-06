@@ -10,11 +10,11 @@ website:
         text: Home
       - href: AboutMe.qmd
         text: About Me
-      - project.qmd
+      - href: project.qmd
         text: Project
-      - freeforall.qmd
+      - href: freeforall.qmd
         text: Free for All
-      - resume.qmd
+      - href: resume.qmd
         text: Resume
 
 format:
