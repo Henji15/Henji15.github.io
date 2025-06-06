@@ -1,3 +1,4 @@
 ---
 title: "About Me"
+page-title: true
 ---
