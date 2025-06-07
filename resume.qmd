@@ -1,3 +1,5 @@
 ---
 title: "Resume"
 ---
+You can view my resume [here] (media/Tu_Max_Resume.pdf)
+---
