@@ -1,5 +1,5 @@
 ---
 title: "Resume"
 ---
-You can view my resume [here](media/Tu_Max_Resume.pdf)
+<embed src="media/Tu_Max_Resume.pdf" type="application/pdf" width="100%" height="600px" />
 ---
