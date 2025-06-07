@@ -1,0 +1,22 @@
+/*-- scss:defaults --*/
+
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+  font-family: 'Inter', serif;
+}
+
+// Colors
+$purple: #660099;
+
+// Base document colors
+$navbar-bg: $purple; // navbar
+
+/*-- scss:rules --*/
+.navbar-brand {
+  pointer-events: none;
+  cursor: default;
+  color: #ffffff;  // or whatever color you're using
+  text-decoration: none;
+}

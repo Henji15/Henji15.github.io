@@ -5,8 +5,10 @@ project:
 website:
   title: "Max Tu"
   navbar:
+    title: "Max Tu"
     left:
       - href: index.qmd
+        text: Home
       - href: AboutMe.qmd
       - href: project.qmd
       - href: freeforall.qmd
@@ -15,8 +17,10 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: 
+      - zephyr
+      - styles.scss
+    mainfont: Inter
     toc: true
     page-layout: full
 
