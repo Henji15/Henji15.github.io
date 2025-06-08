@@ -13,6 +13,22 @@ I have a Shiba Inu named Henji. He's currently ten years old. I remember really 
 
 My family is from Taiwan, so we try to go back at least once a year. The vast majority of my relatives still live in Taiwan, and it's always great to reconnect with them once a year. I love the vibes of the cities, the pubic transport, the culture, and the food in Taiwan. The feel is just different from the US and unique in its own good way. It's definitely the home away from home for me. The family and food are definitely the things that I miss the most when I come back home. I would recommend visiting in the winter though, as the summer can be very hot and humid.
 
-!
+![](media/taiwan1.jpeg){width="40%"} ![](media/taiwan2.jpeg){width="50%"} ![](media/taiwan3.jpeg){width="50%"}
 
 # My Hometown
+
+My hometown is in Tustin, a suburb in Orange County. It borders Irvine, Santa Ana, and Orange. I have lived here for most of my life. It's a safe city with an old town district that's pretty unique. The weather is good year round and it's not too far from LA either. The city has a good variety of food, from asian, american, and mexican cuisine. There's a lot of parks and greenery in the city. I attached a map of food spots to check out in Tustin if you ever find yourself down there.
+
+```{r}
+library(leaflet)
+restaurants <- data.frame(
+  name = c("Tanakaya Japanese Soba", "Barolo Cafe", "Ding Tea", "Seven Grams"),
+  lat = c(33.7388, 33.7410, 33.7351, 33.7476),
+  lng = c(-117.8249, -117.8208, -117.8124, -117.8109)
+)
+leaflet(restaurants) |>
+  addTiles() |>
+  setView(lng = -117.8265, lat = 33.7455, zoom = 14) |>
+ addMarkers(~lng, ~lat, popup = ~name)
+
+```
