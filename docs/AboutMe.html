@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -66,6 +100,26 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
 
 
 </head>
@@ -144,13 +198,32 @@ ul.task-list li input[type="checkbox"] {
 <section id="my-dog" class="level1">
 <h1>My Dog</h1>
 <p>I have a Shiba Inu named Henji. He’s currently ten years old. I remember really wanting to have a dog when I was younger as I was the only child in the family. He loves to sleep and watch us eat food all the time. Even though he is very stubborn and does not listen well at all, he’s been a blessing to our family. Because of him, we would go walk around the neighborhood much more often. That actually led us to meeting our neighbors and getting to know them much better. I’m very thankful to have Henji in my life as a lifelong companion. Here are some photos of him :)</p>
-<p><img src="media/dog1.jpeg" class="img-fluid" style="width:60.0%" data-align="left" alt="Me with my dog"> <img src="media/dog2.jpeg" class="img-fluid" style="width:60.0%" data-align="center"> <img src="media/dog3.jpeg" class="img-fluid" style="width:60.0%" data-align="right" alt="Sleepy"></p>
+<p><img src="media/dog1.jpeg" class="img-fluid" style="width:40.0%" data-align="left" alt="Me with my dog"> <img src="media/dog2.jpeg" class="img-fluid" style="width:40.0%" data-align="center"> <img src="media/dog3.jpeg" class="img-fluid" style="width:40.0%" data-align="right" alt="Sleepy"></p>
 </section>
 <section id="taiwan" class="level1">
 <h1>Taiwan</h1>
+<p>My family is from Taiwan, so we try to go back at least once a year. The vast majority of my relatives still live in Taiwan, and it’s always great to reconnect with them once a year. I love the vibes of the cities, the pubic transport, the culture, and the food in Taiwan. The feel is just different from the US and unique in its own good way. It’s definitely the home away from home for me. The family and food are definitely the things that I miss the most when I come back home. I would recommend visiting in the winter though, as the summer can be very hot and humid.</p>
+<p><img src="media/taiwan1.jpeg" class="img-fluid" style="width:40.0%"> <img src="media/taiwan2.jpeg" class="img-fluid" style="width:50.0%"> <img src="media/taiwan3.jpeg" class="img-fluid" style="width:50.0%"></p>
 </section>
 <section id="my-hometown" class="level1">
 <h1>My Hometown</h1>
+<p>My hometown is in Tustin, a suburb in Orange County. It borders Irvine, Santa Ana, and Orange. I have lived here for most of my life. It’s a safe city with an old town district that’s pretty unique. The weather is good year round and it’s not too far from LA either. The city has a good variety of food, from asian, american, and mexican cuisine. There’s a lot of parks and greenery in the city. I attached a map of food spots to check out in Tustin if you ever find yourself down there.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>restaurants <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Tanakaya Japanese Soba"</span>, <span class="st">"Barolo Cafe"</span>, <span class="st">"Ding Tea"</span>, <span class="st">"Seven Grams"</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">lat =</span> <span class="fu">c</span>(<span class="fl">33.7388</span>, <span class="fl">33.7410</span>, <span class="fl">33.7351</span>, <span class="fl">33.7476</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">lng =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">117.8249</span>, <span class="sc">-</span><span class="fl">117.8208</span>, <span class="sc">-</span><span class="fl">117.8124</span>, <span class="sc">-</span><span class="fl">117.8109</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(restaurants) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setView</span>(<span class="at">lng =</span> <span class="sc">-</span><span class="fl">117.8265</span>, <span class="at">lat =</span> <span class="fl">33.7455</span>, <span class="at">zoom =</span> <span class="dv">14</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">addMarkers</span>(<span class="sc">~</span>lng, <span class="sc">~</span>lat, <span class="at">popup =</span> <span class="sc">~</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-47473700a7ea4157a350" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-47473700a7ea4157a350">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[33.7388,33.741,33.7351,33.7476],[-117.8249,-117.8208,-117.8124,-117.8109],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Tanakaya Japanese Soba","Barolo Cafe","Ding Tea","Seven Grams"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[33.7455,-117.8265],14,[]],"limits":{"lat":[33.7351,33.7476],"lng":[-117.8249,-117.8109]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 </section>
