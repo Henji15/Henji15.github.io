@@ -1,4 +1,20 @@
 ---
-title: "Free for All"
-format: html
+title: "NBA Finals"
+toc: false
 ---
+
+# Pacers Vs. Thunder
+
+I have been a huge basketball fan my whole life, a lifelong Lakers fan too, just throwing it out there. So if you told me that this year's finals would feature the OKC Thunder vs. the Indiana Pacers, I would have said that you were crazy. The Thunder part I wouldn't be too surprised. They were one of the top teams in the Western Conference last year. The Pacers on the other hand was a complete shocker. I expected either last year's finals winner Celtics or the red hot Cavs to make it the finals. Injuries made both of these teams a lot less formidable. The Pacer's quick pace and relentless effort allowed them to take down the gritty New York Knicks. The series is currently tied 1-1, so we'll have to see what happens next. This will definitely be a great series for the books.
+
+# What the Hellyburton?
+
+Tyrese Haliburton has been the finisher for the Pacers this playoffs this season. He hasn't the most points in the games, that would go to Pascal Siakam, but Hali has created some of the most memorable playoff memories in recent times. He has hit not one, not two, not three, but four game winning shots in different games of different series. Some call it witchcraft, I think this is just amazing basketball.
+
+![](media/finals1.jpg){width="70%"}
+
+# MVP Shai
+
+The other main piece on the opposing team is Shai Gilgeous-Alexander. Known as SGA for short, he earned the MVP on effortless shot making and efficient scoring. He has averaged 30 points this season and is looking to get another piece of the hardware at the end of the season. With a stacked crew of stars for teammates, SGA has great support to help him even if his shots do not fall.
+
+![](media/finals2.jpg){width="70%"}
