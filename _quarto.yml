@@ -12,6 +12,7 @@ website:
       - href: AboutMe.qmd
       - href: project.qmd
       - href: freeforall.qmd
+      - text: NBA Finals
       - href: resume.qmd
         
 
